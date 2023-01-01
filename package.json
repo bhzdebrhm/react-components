@@ -1,5 +1,5 @@
 {
-  "version": "0.5.2",
+  "version": "0.5.3",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -65,8 +65,8 @@
     "typescript": "^4.9.4"
   },
   "dependencies": {
-    "@bhzdebrhm/react-hooks": "^0.4.2",
-    "@bhzdebrhm/use-emotion": "^0.4.5",
+    "@bhzdebrhm/react-hooks": "^0.4.8",
+    "@bhzdebrhm/use-emotion": "^0.5.1",
     "@visx/responsive": "^2.17.0",
     "classnames": "^2.3.2",
     "lodash": "^4.17.21",
