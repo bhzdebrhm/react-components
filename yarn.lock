@@ -948,29 +948,21 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@bhzdebrhm/react-hooks@^0.3.8":
-  version "0.3.8"
-  resolved "https://npm.pkg.github.com/download/@bhzdebrhm/react-hooks/0.3.8/a9c98f116a8b95a4f61a8e62de2f75510b089bb4#a9c98f116a8b95a4f61a8e62de2f75510b089bb4"
-  integrity sha512-iD3ok8L0kUDWZ+l+7UJ9RZIxby1OueLXP+Z9aBlPDwzoSky3bAT1dA+RwH+r4m9mfpfQIna2NOn5GmSSqKZdQg==
+"@bhzdebrhm/react-hooks@0.4.8", "@bhzdebrhm/react-hooks@^0.4.8":
+  version "0.4.8"
+  resolved "https://npm.pkg.github.com/download/@bhzdebrhm/react-hooks/0.4.8/005948dc2fcf29a9d447e09709c185e01c3fce11#005948dc2fcf29a9d447e09709c185e01c3fce11"
+  integrity sha512-bP3Xl5fqkGkZsJGba2bAd7X5erkXAPKK6VUUI8NogxKQyN8GoinNmV1yIelL4IBVqo+hTL+HmhtT5xz5bKqBIw==
   dependencies:
     immer "^9.0.16"
     uuid "^9.0.0"
 
-"@bhzdebrhm/react-hooks@^0.4.1":
-  version "0.4.1"
-  resolved "https://npm.pkg.github.com/download/@bhzdebrhm/react-hooks/0.4.1/efc2283ca9e86895c317c94459b1a2d5528d315a#efc2283ca9e86895c317c94459b1a2d5528d315a"
-  integrity sha512-tGQto7wlQsLO5i0LyEwc9CqOEaaCp3WmYxIbfbMbKcwnR6FcLZg7UAKPTtcSToQD1CvEcBN825N95tWbXqRyQg==
+"@bhzdebrhm/use-emotion@^0.5.1":
+  version "0.5.1"
+  resolved "https://npm.pkg.github.com/download/@bhzdebrhm/use-emotion/0.5.1/9d7fb5caab0317202308da9af3c70ae927bb64be#9d7fb5caab0317202308da9af3c70ae927bb64be"
+  integrity sha512-iZ3XP7CozzgGc2plmOImoH94udFsDjI7C8QqN4+qIBFFY4wAfTF209kriP785qyJjM2pgkdObD9afBbPxV56Qg==
   dependencies:
-    immer "^9.0.16"
-    uuid "^9.0.0"
-
-"@bhzdebrhm/use-emotion@^0.4.5":
-  version "0.4.5"
-  resolved "https://npm.pkg.github.com/download/@bhzdebrhm/use-emotion/0.4.5/c24b7c862b9b76ee036101eff33a8c68fe83247f#c24b7c862b9b76ee036101eff33a8c68fe83247f"
-  integrity sha512-zQEukON/jQnaXU4ELvFf09c32RbAsBqCJi4VOQ90PCp4GpRL1PKRC2QKKcGPr6SAVwqlxQiK9mHZC1j78ZFgug==
-  dependencies:
-    "@bhzdebrhm/react-hooks" "^0.3.8"
-    "@bhzdebrhm/utils" "^0.2.0"
+    "@bhzdebrhm/react-hooks" "0.4.8"
+    "@bhzdebrhm/utils" "0.2.3"
     "@ctrl/tinycolor" "^3.5.0"
     "@emotion/react" "^11.10.5"
     "@rollup/plugin-node-resolve" "^15.0.1"
@@ -979,10 +971,10 @@
     immer "^9.0.16"
     lodash "^4.17.21"
 
-"@bhzdebrhm/utils@^0.2.0":
-  version "0.2.0"
-  resolved "https://npm.pkg.github.com/download/@bhzdebrhm/utils/0.2.0/669c7b1a80b880a845eec46f537770c9f959cd8b#669c7b1a80b880a845eec46f537770c9f959cd8b"
-  integrity sha512-LmjU/s4pLby39G3ty1QhpsRvp21Z/DadLA2mObZxDV2AD/YlWGuka1yJOQ6u0bm1rhTLeaih+1yffPK2bnSQlQ==
+"@bhzdebrhm/utils@0.2.3":
+  version "0.2.3"
+  resolved "https://npm.pkg.github.com/download/@bhzdebrhm/utils/0.2.3/0d6c3b3dcd6f4aa785b5d710981295a96e7d3330#0d6c3b3dcd6f4aa785b5d710981295a96e7d3330"
+  integrity sha512-jw92gymR0E7l+X/JYAGsI50pOz+aWKgEK6e3d4jgtSSUYhMOfxG3NVLxrAdQx/noi9RaCVfwqfbkQMpkAVRmsw==
   dependencies:
     dayjs "^1.11.7"
     debug "^4.3.4"
