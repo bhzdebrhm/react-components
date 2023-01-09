@@ -21,35 +21,31 @@ export const Grid = React.forwardRef((
         ...rest
     } = props
 
-    const styles = React.useMemo(() => (
-        {
-            display: "grid",
-            gridTemplateAreas: templateAreas,
-            gridGap: gap,
-            gridRowGap: rowGap,
-            gridColumnGap: columnGap,
-            gridAutoColumns: autoColumns,
-            gridColumn: column,
-            gridRow: row,
-            gridAutoFlow: autoFlow,
-            gridAutoRows: autoRows,
-            gridTemplateRows: templateRows,
-            gridTemplateColumns: templateColumns,
-        }
-    ), [templateAreas,
+
+    const [computedStyles] = useEmotion({
+        display: "grid",
+        gridTemplateAreas: templateAreas,
+        gridGap: gap,
+        gridRowGap: rowGap,
+        gridColumnGap: columnGap,
+        gridAutoColumns: autoColumns,
+        gridColumn: column,
+        gridRow: row,
+        gridAutoFlow: autoFlow,
+        gridAutoRows: autoRows,
+        gridTemplateRows: templateRows,
+        gridTemplateColumns: templateColumns,
+    }, [templateAreas,
         gap,  
         rowGap, 
         columnGap,
-         autoColumns,
-          column,
-           row,
-           autoFlow,
-            autoRows, 
-            templateRows , 
-            templateColumns])
-
-
-    const [computedStyles] = useEmotion(styles)
+        autoColumns,
+        column,
+        row,
+        autoFlow,
+        autoRows, 
+        templateRows , 
+        templateColumns])
 
     return <div ref={ref} className={classNames(computedStyles, className)} {...rest} />
 })

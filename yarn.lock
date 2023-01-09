@@ -956,10 +956,10 @@
     immer "^9.0.16"
     uuid "^9.0.0"
 
-"@bhzdebrhm/use-emotion@^0.5.1":
-  version "0.5.1"
-  resolved "https://npm.pkg.github.com/download/@bhzdebrhm/use-emotion/0.5.1/9d7fb5caab0317202308da9af3c70ae927bb64be#9d7fb5caab0317202308da9af3c70ae927bb64be"
-  integrity sha512-iZ3XP7CozzgGc2plmOImoH94udFsDjI7C8QqN4+qIBFFY4wAfTF209kriP785qyJjM2pgkdObD9afBbPxV56Qg==
+"@bhzdebrhm/use-emotion@^0.5.3":
+  version "0.5.3"
+  resolved "https://npm.pkg.github.com/download/@bhzdebrhm/use-emotion/0.5.3/a2969060dd8c8a4fdf8a3c007f0ab77f8c6a0974#a2969060dd8c8a4fdf8a3c007f0ab77f8c6a0974"
+  integrity sha512-N+nlOKIuIPhtTvjYxfAcRp6Y4o5wjbiosd9JxCV4FHxhNOi7UtVLzJEUEjd04MFd0+iaWBsuFdLE25wN+oBLRQ==
   dependencies:
     "@bhzdebrhm/react-hooks" "0.4.8"
     "@bhzdebrhm/utils" "0.2.3"
@@ -1317,11 +1317,6 @@
   dependencies:
     "@jridgewell/resolve-uri" "3.1.0"
     "@jridgewell/sourcemap-codec" "1.4.14"
-
-"@juggle/resize-observer@^3.3.1":
-  version "3.4.0"
-  resolved "https://registry.yarnpkg.com/@juggle/resize-observer/-/resize-observer-3.4.0.tgz#08d6c5e20cf7e4cc02fd181c4b0c225cd31dbb60"
-  integrity sha512-dfLbk+PwWvFzSxwk3n5ySL0hfBog779o8h68wK/7/APo/7cgyWp5jcXockbxdk5kFRkbeXWm4Fbi9FrdN381sA==
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
@@ -1688,12 +1683,11 @@
     semver "^7.3.2"
     tsutils "^3.17.1"
 
-"@visx/responsive@^2.17.0":
-  version "2.17.0"
-  resolved "https://registry.yarnpkg.com/@visx/responsive/-/responsive-2.17.0.tgz#8a31f016a270234bfecf25fb066f30d19784ddc7"
-  integrity sha512-3dY2shGbQnoknIRv3Vfnwsy3ZA8Q5Q/rYnTLiokWChYRfNC8NMPoX9mprEeb/gMAxtKjaLn3zcCgd8R+eetxIQ==
+"@visx/responsive@^3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@visx/responsive/-/responsive-3.0.0.tgz#e183c54ce04cffe756378872d30ac88c66a137ac"
+  integrity sha512-immnxQwOWlrxbnlCIqJWuDpPfrM6tglgMTN1WsyXyGluLMJqhuuxqxllfXaRPkQFS4fcvs66KCEELdazh96U2w==
   dependencies:
-    "@juggle/resize-observer" "^3.3.1"
     "@types/lodash" "^4.14.172"
     "@types/react" "*"
     lodash "^4.17.21"
@@ -3782,10 +3776,10 @@ humanize-duration@^3.15.3:
   resolved "https://registry.yarnpkg.com/humanize-duration/-/humanize-duration-3.27.3.tgz#db654e72ebf5ccfe232c7f56bc58aa3a6fe4df88"
   integrity sha512-iimHkHPfIAQ8zCDQLgn08pRqSVioyWvnGfaQ8gond2wf7Jq2jJ+24ykmnRyiz3fIldcn4oUuQXpjqKLhSVR7lw==
 
-husky@^8.0.2:
-  version "8.0.2"
-  resolved "https://registry.yarnpkg.com/husky/-/husky-8.0.2.tgz#5816a60db02650f1f22c8b69b928fd6bcd77a236"
-  integrity sha512-Tkv80jtvbnkK3mYWxPZePGFpQ/tT3HNSs/sasF9P2YfkMezDl3ON37YN6jUUI4eTg5LcyVynlb6r4eyvOmspvg==
+husky@^8.0.3:
+  version "8.0.3"
+  resolved "https://registry.yarnpkg.com/husky/-/husky-8.0.3.tgz#4936d7212e46d1dea28fef29bb3a108872cd9184"
+  integrity sha512-+dQSyqPh4x1hlO1swXBiNb2HzTDN1I2IGLQx1GrBuiqFJfoMrnZWwVmatvSiO+Iz8fBUnf+lekwNo4c2LlXItg==
 
 iconv-lite@0.4.24, iconv-lite@^0.4.24:
   version "0.4.24"

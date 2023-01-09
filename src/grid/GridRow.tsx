@@ -28,7 +28,7 @@ export const GridRow: React.FC<React.PropsWithChildren<GridRowProps>> = (props) 
         : countToColumns(columns)
 
 
-    const [style_] = useEmotion(style || {})
+    const [style_] = useEmotion(style || {}, [style])
 
 
     return (

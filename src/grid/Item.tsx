@@ -24,20 +24,16 @@ export const GridItem = React.forwardRef((props: any, ref) => {
             ...rest
         } = props
     
-        const styles = React.useMemo(()=> {
-            return filterUndefined({
-                gridArea: area,
-                gridColumn: spanFn(colSpan),
-                gridRow: spanFn(rowSpan),
-                gridColumnStart: colStart,
-                gridColumnEnd: colEnd,
-                gridRowStart: rowStart,
-                gridRowEnd: rowEnd,
-            })
-        }, [area, colSpan, rowSpan, colStart, colEnd,rowStart, rowEnd ])
     
-    
-        const [computedStyles] = useEmotion(styles);
+        const [computedStyles] = useEmotion(filterUndefined({
+            gridArea: area,
+            gridColumn: spanFn(colSpan),
+            gridRow: spanFn(rowSpan),
+            gridColumnStart: colStart,
+            gridColumnEnd: colEnd,
+            gridRowStart: rowStart,
+            gridRowEnd: rowEnd,
+        }), [area, colSpan, rowSpan, colStart, colEnd,rowStart, rowEnd ]);
     
 
         return <div ref={ref} className={classNames(computedStyles, className)} {...rest} />
