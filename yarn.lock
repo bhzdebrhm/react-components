@@ -971,10 +971,10 @@
     immer "^9.0.16"
     uuid "^9.0.0"
 
-"@bhzdebrhm/use-emotion@^0.5.5":
-  version "0.5.5"
-  resolved "https://npm.pkg.github.com/download/@bhzdebrhm/use-emotion/0.5.5/3c49970f16d48fb6148ba383aacd9bab7cae2707#3c49970f16d48fb6148ba383aacd9bab7cae2707"
-  integrity sha512-RfNxf5+JX0vCP9Pw3AKNvD7YdvKBLN9ZWm30WjwHcpsEO+kitJ7eqEhWSdhDHnAdQtzRnBMwiPEVwVuddqbTww==
+"@bhzdebrhm/use-emotion@^0.5.7":
+  version "0.5.7"
+  resolved "https://npm.pkg.github.com/download/@bhzdebrhm/use-emotion/0.5.7/304fb7b863ed6a427940a584db5acb812e4504dd#304fb7b863ed6a427940a584db5acb812e4504dd"
+  integrity sha512-VefDPUA/Pu+0IG/WpFdkOoJl9kCq1GUvK4ogA+Bc9RSOiq9YU8dqcg8XWGsihSEw6YSWpZBZM2we9V7BDwQSVA==
   dependencies:
     "@bhzdebrhm/react-hooks" "0.4.8"
     "@bhzdebrhm/utils" "0.2.3"
