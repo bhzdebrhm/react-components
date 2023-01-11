@@ -66,7 +66,7 @@
   },
   "dependencies": {
     "@bhzdebrhm/react-hooks": "^0.4.9",
-    "@bhzdebrhm/use-emotion": "^0.5.5",
+    "@bhzdebrhm/use-emotion": "^0.5.6",
     "@visx/responsive": "^3.0.0",
     "classnames": "^2.3.2",
     "lodash": "^4.17.21",
