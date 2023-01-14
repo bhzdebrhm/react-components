@@ -1,28 +1,45 @@
 import classNames from 'classnames';
 import React from 'react';
+import { loadStyle, usePreLoadedStyle, themeEnvironment } from '@bhzdebrhm/use-emotion';
 
 import { useEmotion } from '@bhzdebrhm/use-emotion';
+
+
+interface FlexProps {
+    direction?: string, 
+    align?: string,
+    justify?: string,
+    wrap?: string,
+    basis?: string,
+    grow?: string,
+    shrink?: string,
+    gap?: string,
+}
+
+
+const flexFn = (props: FlexProps) => ({
+        display: "flex",
+        flexDirection: props.direction,
+        alignItems: props.align,
+        justifyContent: props.justify,
+        flexWrap: props.wrap,
+        flexBasis: props.basis,
+        flexGrow: props.grow,
+        flexShrink: props.shrink,
+        gap: props.gap,
+})
+
+
+const loadedStyle = loadStyle<any, any,any>(themeEnvironment.theme, flexFn)
+
 
 export const Flex = React.forwardRef((props: any, ref: any) => {
     const { direction, align, justify, wrap, basis, grow, shrink, gap, className, style, ...rest } =
         props
-
-    const styles = React.useMemo(() => ({
-        display: "flex",
-        flexDirection: direction,
-        alignItems: align,
-        justifyContent: justify,
-        flexWrap: wrap,
-        flexBasis: basis,
-        flexGrow: grow,
-        flexShrink: shrink,
-        gap,
-    }), [direction, align, justify,wrap,basis, grow,shrink, gap])
-
-    const [flexStyles] = useEmotion(styles);
+    const [flexStyle] = usePreLoadedStyle(loadedStyle, {direction, align, justify,wrap,basis, grow,shrink, gap});
 
 
     const [style_] = useEmotion(style)
 
-    return <div ref={ref} className={classNames(className, flexStyles, style_)} {...rest} />
+    return <div ref={ref} className={classNames(className, flexStyle, style_)} {...rest} />
 })

@@ -1,14 +1,17 @@
 import classNames from 'classnames';
 import React from 'react';
-import { useEmotion } from '@bhzdebrhm/use-emotion';
+import { loadStyle, themeEnvironment, usePreLoadedStyle } from '@bhzdebrhm/use-emotion';
+
+const fullSpaceStyle = {
+    width: "full",
+    height: "full",
+}
+
+const loadedStyle = loadStyle<any, any ,any>(themeEnvironment, fullSpaceStyle)
 
 export const FullSpace = React.forwardRef((props: React.PropsWithChildren<React.HtmlHTMLAttributes<HTMLDivElement>>, ref: React.LegacyRef<HTMLDivElement> | undefined) => {
     const { children, className, ...restProps } = props;
-
-    const [fullSpaceStyle] = useEmotion({
-        width: "full",
-        height: "full",
-    })
+    const [fullSpaceStyle] = usePreLoadedStyle(loadedStyle);
 
 
     return <div className={classNames(className, fullSpaceStyle)} ref={ref} {...restProps}>{children}</div>
