@@ -22,13 +22,13 @@ interface GridItemProps {
 }
 
 const itemFn = (props: GridItemProps) => filterUndefined({
-    gridArea: props.area,
-    gridColumn: spanFn(props.colSpan),
-    gridRow: spanFn(props.rowSpan),
-    gridColumnStart: props.colStart,
-    gridColumnEnd: props.colEnd,
-    gridRowStart: props.rowStart,
-    gridRowEnd: props.rowEnd,
+    gridArea: props?.area,
+    gridColumn: spanFn(props?.colSpan),
+    gridRow: spanFn(props?.rowSpan),
+    gridColumnStart: props?.colStart,
+    gridColumnEnd: props?.colEnd,
+    gridRowStart: props?.rowStart,
+    gridRowEnd: props?.rowEnd,
 })
 
 const loaded = loadStyle<any, any ,any>(themeEnvironment, itemFn) 

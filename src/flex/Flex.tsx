@@ -19,14 +19,14 @@ interface FlexProps {
 
 const flexFn = (props: FlexProps) => ({
         display: "flex",
-        flexDirection: props.direction,
-        alignItems: props.align,
-        justifyContent: props.justify,
-        flexWrap: props.wrap,
-        flexBasis: props.basis,
-        flexGrow: props.grow,
-        flexShrink: props.shrink,
-        gap: props.gap,
+        flexDirection: props?.direction,
+        alignItems: props?.align,
+        justifyContent: props?.justify,
+        flexWrap: props?.wrap,
+        flexBasis: props?.basis,
+        flexGrow: props?.grow,
+        flexShrink: props?.shrink,
+        gap: props?.gap,
 })
 
 
