@@ -1,4 +1,4 @@
-import { loadStyle, themeEnvironment, usePreLoadedStyle } from '@bhzdebrhm/use-emotion';
+import { useEmotion } from '@bhzdebrhm/use-emotion';
 import classNames from 'classnames';
 import React from 'react';
 import { Grid, GridItem } from '../../grid';
@@ -16,21 +16,17 @@ export interface SidebarOutlet {
     setCols: React.Dispatch<React.SetStateAction<[string, string]>>
 }
 
-
-const sidedLayoutStyle = {
-    height: "full",
-};
-
-
-const loadedSidedLayoutStyle = loadStyle<any, any ,any>(themeEnvironment, sidedLayoutStyle)
-
 export const SideBar: React.FC<SideBarProps> = (props): React.ReactElement => {
     const {  className, style } = props;
     const outletContext = useOutletContext();
     const [sidebar, setSidebar] = React.useState<React.ReactNode | null>(null);
     const [showSidebar, setShowSidebar] = React.useState<Boolean>(true);
     const [cols, setCols] = React.useState<[string, string]>(["20rem", "auto"]);
-    const [sidedLayoutClassName] = usePreLoadedStyle(loadedSidedLayoutStyle);
+
+
+    const [sidedLayoutStyle] = useEmotion({
+        height: "full",
+    })
 
 
     const mergedOutletContext = React.useMemo(() => {
@@ -42,7 +38,7 @@ export const SideBar: React.FC<SideBarProps> = (props): React.ReactElement => {
         <Grid
             templateRows='repeat(12, 1fr)'
             templateColumns={cols.join(' ')}
-            className={classNames(className, sidedLayoutClassName)}
+            className={classNames(className, sidedLayoutStyle)}
             style={style}
         >
             {

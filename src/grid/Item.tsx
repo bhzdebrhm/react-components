@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import React from 'react';
-import { loadStyle, themeEnvironment, usePreLoadedStyle } from '@bhzdebrhm/use-emotion';
+import { useEmotion } from '@bhzdebrhm/use-emotion';
 import { filterUndefined } from '@bhzdebrhm/utils';
 import { mapResponsive } from '@bhzdebrhm/utils';
 
@@ -8,32 +8,10 @@ function spanFn(span?: any) {
     return mapResponsive(span, (value: any) =>
         value === "auto" ? "auto" : `span ${value}/span ${value}`,
     )
-};
-
-
-interface GridItemProps {
-    area: string,
-    colSpan: string,
-    colStart: string,
-    colEnd: string,
-    rowEnd: string,
-    rowSpan: string,
-    rowStart: string,
 }
 
-const itemFn = (props: GridItemProps) => filterUndefined({
-    gridArea: props?.area,
-    gridColumn: spanFn(props?.colSpan),
-    gridRow: spanFn(props?.rowSpan),
-    gridColumnStart: props?.colStart,
-    gridColumnEnd: props?.colEnd,
-    gridRowStart: props?.rowStart,
-    gridRowEnd: props?.rowEnd,
-})
-
-const loaded = loadStyle<any, any ,any>(themeEnvironment, itemFn) 
-
 export const GridItem = React.forwardRef((props: any, ref) => {
+    {
         const {
             area,
             colSpan,
@@ -46,16 +24,18 @@ export const GridItem = React.forwardRef((props: any, ref) => {
             ...rest
         } = props
     
-        const [itemStyle] = usePreLoadedStyle(loaded, 
-            {area,
-            colSpan,
-            colStart,
-            colEnd,
-            rowEnd,
-            rowSpan,
-            rowStart
-        })
+    
+        const [computedStyles] = useEmotion(filterUndefined({
+            gridArea: area,
+            gridColumn: spanFn(colSpan),
+            gridRow: spanFn(rowSpan),
+            gridColumnStart: colStart,
+            gridColumnEnd: colEnd,
+            gridRowStart: rowStart,
+            gridRowEnd: rowEnd,
+        }), [area, colSpan, rowSpan, colStart, colEnd,rowStart, rowEnd ]);
+    
 
-
-        return <div ref={ref} className={classNames(itemStyle, className)} {...rest} />
+        return <div ref={ref} className={classNames(computedStyles, className)} {...rest} />
+    }
 })
